@@ -1,0 +1,14 @@
+<resources>
+    <dimen name="default_margin_tiny">4dp</dimen>
+    <dimen name="default_margin_small">8dp</dimen>
+    <dimen name="default_margin_medium">16dp</dimen>
+    <dimen name="default_margin_large">24dp</dimen>
+    <dimen name="default_button_textsize_medium">16dp</dimen>
+    <dimen name="default_textview_textsize_medium">16sp</dimen>
+    <dimen name="default_edittext_textsize_medium">16sp</dimen>
+    <dimen name="default_edittext_textsize_small">13sp</dimen>
+    <dimen name="default_textview_textsize_small">13sp</dimen>
+    <dimen name="default_fab_margin">10dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+</resources>

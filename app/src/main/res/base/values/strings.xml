@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">SetoranTunai</string>
+    <string name="login">Masuk</string>
+    <string name="logout">Keluar</string>
+    <string name="username">Nama Pengguna</string>
+    <string name="password">Kata Sandi</string>
+    <string name="logging_in">Memeriksa data akun</string>
+    <string name="loading_data">Memuat data tranksaksi</string>
+    <string name="deleting_tranksaksi">Menghapus tranksaksi</string>
+    <string name="adding_tranksaksi">Menambah tranksaksi baru</string>
+    <string name="username_password_wrong">Username atau password salah!</string>
+    <string name="confirmation">Konfirmasi</string>
+    <string name="yes">Ya</string>
+    <string name="cancel">Batal</string>
+    <string name="really_want_to_add">Apakah data yang dimasukkan sudah benar?</string>
+    <string name="really_want_to_delete">Apakah yakin ingin menghapuskan data ini?</string>
+
+    <string name="id_setoran">Id Setoran</string>
+    <string name="id_invoice">Id Invoice</string>
+    <string name="no_rekening">No Rekening</string>
+    <string name="kantor">Kantor</string>
+    <string name="jumlah">Jumlah</string>
+    <string name="bea_setoran">Bea Setoran</string>
+    <string name="bea_biaya">Bea Biaya</string>
+    <string name="terbilang">Terbilang</string>
+    <string name="total_biaya">Total Biaya</string>
+    <string name="no_nota">No Nota</string>
+    <string name="no_cetak">No Cetak</string>
+    <string name="asal_biaya">Asal Biaya</string>
+    <string name="nama_karyawan">Nama Karyawan</string>
+    <string name="tgl_invoice">Tanggal Invoice</string>
+
+    <string name="list_transaksi">List Tranksaksi</string>
+    <string name="detail_tranksaksi">Detail Tranksaksi</string>
+    <string name="add_tranksaksi">Tambah Tranksaksi</string>
+    <string name="delete_tranksaksi">Hapus Tranksaksi</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Transaksi</string>
+    <string name="title_logout">Invoice History</string>
+
+</resources>

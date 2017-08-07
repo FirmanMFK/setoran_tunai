@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId rootProject.ext.appId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"http://192.168.43.68/setoran-tunai/\"")
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "\"http://192.168.43.68/setoran-tunai/\"")
+        }
+    }
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res/base', 'src/main/res/tranksaksi', 'src/main/res/login', 'src/main/res/home',
+                           'src/main/res/detail_tranksaksi', 'src/main/res/add_tranksaksi', 'src/main/res/activity_home']
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //UI Testing
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //Unit Test
+    testCompile "junit:junit:$rootProject.ext.junitVersion"
+
+    //Android
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+
+    //Networking
+    compile "com.squareup.retrofit:retrofit:$rootProject.retrofitVersion"
+    compile "com.squareup.okhttp:okhttp:$rootProject.okHttpVersion"
+
+    //GSON
+    compile "com.squareup.retrofit:converter-gson:$rootProject.converterGsonVersion"
+
+    // code generator for view
+    compile "com.jakewharton:butterknife:$rootProject.butterKnifeVersion"
+
+    //Local data
+    compile "com.orhanobut:hawk:$rootProject.hawkVersion"
+
+    //Glide
+    compile "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+
+    //Material DateTime Picker
+    compile "com.wdullaer:materialdatetimepicker:$rootProject.materialDateTimePickerVersion"
+}
