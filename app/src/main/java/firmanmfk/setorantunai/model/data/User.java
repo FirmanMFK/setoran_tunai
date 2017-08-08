@@ -9,17 +9,16 @@ import com.google.gson.annotations.SerializedName;
 
 public class User {
 
-    @SerializedName("id_user")
+    @SerializedName("id_pengguna")
     private String idUser;
-    @SerializedName("nm_user")
+    @SerializedName("nm_pengguna")
     private String nmUser;
-    @SerializedName("level_user")
-    private String levelUser;
 
-    public User(String nmUser, String idUser, String levelUser) {
+
+    public User(String nmUser, String idUser) {
         this.nmUser = nmUser;
         this.idUser = idUser;
-        this.levelUser = levelUser;
+
     }
 
     public User() {
@@ -41,11 +40,4 @@ public class User {
         this.nmUser = nmUser;
     }
 
-    public String getLevelUser() {
-        return levelUser;
-    }
-
-    public void setLevelUser(String levelUser) {
-        this.levelUser = levelUser;
-    }
 }

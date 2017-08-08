@@ -15,8 +15,7 @@ public class Transaction {
     private String idInvoice;
     @SerializedName("no_rekening")
     private String noRekening;
-    //@SerializedName("bea_setoran")
-    //private String beaSetoran;
+
     @SerializedName("total_biaya")
     private String totalBiaya;
     private String kantor;
@@ -25,7 +24,6 @@ public class Transaction {
         this.idSetoran = idSetoran;
         this.idInvoice = idInvoice;
         this.noRekening = noRekening;
-        //this.beaSetoran = beaSetoran;
         this.totalBiaya = totalBiaya;
         this.kantor = kantor;
     }
