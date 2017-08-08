@@ -42,6 +42,7 @@ public interface RestApi {
                                             @Field("jumlah") String jumlah,
                                             @Field("terbilang") String terbilang,
                                             @Field("kantor") String kantor,
+                                            @Field("bea_biaya") String beaBiaya,
                                             @Field("id_karyawan") String idKaryawan);
 
     @FormUrlEncoded

@@ -21,8 +21,8 @@ public class DetailTranscation extends Transaction implements Serializable {
     @SerializedName("nm_karyawan")
     private String namaKaryawan;
 
-    public DetailTranscation(String idSetoran, String idInvoice, String noRekening, String totalBiaya, String kantor, String noCetak, String noNota, String tglInvoice, String asalBiaya, String namaKaryawan) {
-        super(idSetoran, idInvoice, noRekening, totalBiaya, kantor);
+    public DetailTranscation(String idSetoran, String idInvoice, String noRekening, String beaSetoran, String totalBiaya, String kantor, String noCetak, String noNota, String tglInvoice, String asalBiaya, String namaKaryawan) {
+        super(idSetoran, idInvoice, noRekening, beaSetoran, totalBiaya, kantor);
         this.noCetak = noCetak;
         this.noNota = noNota;
         this.tglInvoice = tglInvoice;
@@ -79,6 +79,7 @@ public class DetailTranscation extends Transaction implements Serializable {
                 "idSetoran='" + getIdSetoran() + '\'' +
                 ", idInvoice='" + getIdInvoice() + '\'' +
                 ", noRekening='" + getNoRekening() + '\'' +
+                ", beaSetoran='" + getBeaSetoran() + '\'' +
                 ", totalBiaya='" + getTotalBiaya() + '\'' +
                 ", kantor='" + getKantor() + '\'' +
                 "noCetak='" + noCetak + '\'' +
