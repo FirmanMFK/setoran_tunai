@@ -31,8 +31,6 @@ import retrofit.Call;
 
 public class AddTranksaksiActivity extends BaseActivity {
 
-    @Bind(R.id.spv_bea_biaya)
-    Spinner spvBeaBiaya;
     @Bind(R.id.et_no_rekening)
     EditText etNoRekening;
     @Bind(R.id.et_asal_biaya)
@@ -56,7 +54,7 @@ public class AddTranksaksiActivity extends BaseActivity {
         setActionBarTitle(getString(R.string.add_tranksaksi));
         displayHome();
         restApi = RetrofitBuilder.create(RestApi.class);
-        setSpinnerBeaBiaya();
+
     }
 
     private void setSpinnerBeaBiaya(){
@@ -70,7 +68,7 @@ public class AddTranksaksiActivity extends BaseActivity {
         ArrayAdapter<String> adapter =
                 new ArrayAdapter<String>(getMyContext(), android.R.layout.simple_spinner_item, arrBeaBiaya);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spvBeaBiaya.setAdapter(adapter);
+
     }
 
     public void addTransaction(){
@@ -83,7 +81,6 @@ public class AddTranksaksiActivity extends BaseActivity {
                         showProgressDialog(getString(R.string.adding_tranksaksi));
 
                         String noRekening = etNoRekening.getText().toString();
-                        String beaBiaya = beaBiayas.get(spvBeaBiaya.getSelectedItemPosition()).getValue();
                         String jumlah = etJumlah.getText().toString();
                         String asalBiaya = etAsalBiaya.getText().toString();
                         String kantor = etKantor.getText().toString();
@@ -92,7 +89,7 @@ public class AddTranksaksiActivity extends BaseActivity {
 
                         Call<Result<String>> service =
                                 restApi.postAddTransaction(noRekening, asalBiaya,
-                                        jumlah, terbilang, kantor, beaBiaya, idKaryawan);
+                                        jumlah, terbilang, kantor, idKaryawan);
                         service.enqueue(new ApiCallback<Result<String>>() {
                             @Override
                             public void onSuccess(Result<String> data) {
@@ -106,7 +103,7 @@ public class AddTranksaksiActivity extends BaseActivity {
                             @Override
                             public void onFailed(Throwable t) {
                                 dismissProgressDialog();
-                                showToast("error");
+                                showToast("Data Error");
                             }
                         });
                     }})

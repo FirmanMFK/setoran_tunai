@@ -72,17 +72,6 @@
                     android:hint="@string/kantor" />
             </android.support.design.widget.TextInputLayout>
 
-            <TextView
-                android:text="@string/bea_biaya"
-                android:textSize="@dimen/default_edittext_textsize_medium"
-                android:textColor="@color/gray"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/default_margin_small"/>
-            <Spinner
-                android:id="@+id/spv_bea_biaya"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
 
             <View
                 android:layout_width="match_parent"

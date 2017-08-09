@@ -37,12 +37,11 @@ public interface RestApi {
 
     @FormUrlEncoded
     @POST(Endpoint.POST_ADD_TRANSACTION)
-    Call<Result<String>> postAddTransaction(@Field("no_rekening") String noRekening,
-                                            @Field("asal_biaya") String asalBiaya,
+    Call<Result<String>> postAddTransaction(@Field("noRekening") String noRekening,
+                                            @Field("asalBiaya") String asalBiaya,
                                             @Field("jumlah") String jumlah,
                                             @Field("terbilang") String terbilang,
                                             @Field("kantor") String kantor,
-                                            @Field("bea_biaya") String beaBiaya,
                                             @Field("id_karyawan") String idKaryawan);
 
     @FormUrlEncoded

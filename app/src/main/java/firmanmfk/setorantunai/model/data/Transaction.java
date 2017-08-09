@@ -15,17 +15,14 @@ public class Transaction {
     private String idInvoice;
     @SerializedName("no_rekening")
     private String noRekening;
-    @SerializedName("bea_setoran")
-    private String beaSetoran;
     @SerializedName("total_biaya")
     private String totalBiaya;
     private String kantor;
 
-    public Transaction(String idSetoran, String idInvoice, String noRekening, String beaSetoran, String totalBiaya, String kantor) {
+    public Transaction(String idSetoran, String idInvoice, String noRekening, String totalBiaya, String kantor) {
         this.idSetoran = idSetoran;
         this.idInvoice = idInvoice;
         this.noRekening = noRekening;
-        this.beaSetoran = beaSetoran;
         this.totalBiaya = totalBiaya;
         this.kantor = kantor;
     }
@@ -57,14 +54,6 @@ public class Transaction {
         this.noRekening = noRekening;
     }
 
-    public String getBeaSetoran() {
-        return beaSetoran;
-    }
-
-    public void setBeaSetoran(String beaSetoran) {
-        this.beaSetoran = beaSetoran;
-    }
-
     public String getTotalBiaya() {
         return totalBiaya;
     }
@@ -87,7 +76,6 @@ public class Transaction {
                 "idSetoran='" + idSetoran + '\'' +
                 ", idInvoice='" + idInvoice + '\'' +
                 ", noRekening='" + noRekening + '\'' +
-                ", beaSetoran='" + beaSetoran + '\'' +
                 ", totalBiaya='" + totalBiaya + '\'' +
                 ", kantor='" + kantor + '\'' +
                 '}';
